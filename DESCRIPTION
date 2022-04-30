@@ -11,7 +11,10 @@ from http: //gamezone.stats.com/.
 License: Apache License (>= 2)
 Encoding: UTF-8
 LazyData: true
-URL: https://jacklich10.github.io/gamezoneR (website) https://www.github.com/JackLich10/gamezoneR (devel)
+URL: https://jacklich10.github.io/gamezoneR,
+    https://www.github.com/JackLich10/gamezoneR,
+    https://saiemgilani.github.io/gamezoneR/,
+    http://gamezoner.sportsdataverse.org/
 BugReports: https://www.github.com/JackLich10/gamezoneR/issues
 Depends: 
     R (>= 4.0)
