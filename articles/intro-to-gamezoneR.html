@@ -17,7 +17,8 @@
 <link href="../deps/bootstrap-5.1.0/bootstrap.min.css" rel="stylesheet">
 <script src="../deps/bootstrap-5.1.0/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
-<!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Intro to gamezoneR">
+<!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><link href="../extra.css" rel="stylesheet">
+<meta property="og:title" content="Intro to gamezoneR">
 <meta property="og:description" content="gamezoneR">
 <meta property="og:image" content="https://raw.githubusercontent.com/JackLich10/gamezoneR/master/man/figures/gamezoneR_40trans.png">
 <meta name="twitter:card" content="summary">
@@ -389,13 +390,13 @@
                    .groups <span class="op">=</span> <span class="st">"drop"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
   <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span>ppp <span class="op">=</span> <span class="va">points</span><span class="op">/</span><span class="va">poss</span><span class="op">)</span></code></pre></div>
 <p>Let’s take a look at the most proficient offenses in college basketball since 2016-17:</p>
-<div id="qbkjfiluee" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="muhpljnrrl" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 html {
   font-family: Chivo, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#qbkjfiluee .gt_table {
+#muhpljnrrl .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -420,7 +421,7 @@ html {
   border-left-color: #D3D3D3;
 }
 
-#qbkjfiluee .gt_heading {
+#muhpljnrrl .gt_heading {
   background-color: #FFFFFF;
   text-align: left;
   border-bottom-color: #FFFFFF;
@@ -432,7 +433,7 @@ html {
   border-right-color: #D3D3D3;
 }
 
-#qbkjfiluee .gt_title {
+#muhpljnrrl .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -444,7 +445,7 @@ html {
   border-bottom-width: 0;
 }
 
-#qbkjfiluee .gt_subtitle {
+#muhpljnrrl .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -456,13 +457,13 @@ html {
   border-top-width: 0;
 }
 
-#qbkjfiluee .gt_bottom_border {
+#muhpljnrrl .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#qbkjfiluee .gt_col_headings {
+#muhpljnrrl .gt_col_headings {
   border-top-style: solid;
   border-top-width: 3px;
   border-top-color: rgba(0, 0, 0, 0);
@@ -477,7 +478,7 @@ html {
   border-right-color: #D3D3D3;
 }
 
-#qbkjfiluee .gt_col_heading {
+#muhpljnrrl .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 80%;
@@ -497,7 +498,7 @@ html {
   overflow-x: hidden;
 }
 
-#qbkjfiluee .gt_column_spanner_outer {
+#muhpljnrrl .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 80%;
@@ -509,15 +510,15 @@ html {
   padding-right: 4px;
 }
 
-#qbkjfiluee .gt_column_spanner_outer:first-child {
+#muhpljnrrl .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#qbkjfiluee .gt_column_spanner_outer:last-child {
+#muhpljnrrl .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#qbkjfiluee .gt_column_spanner {
+#muhpljnrrl .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 3px;
   border-bottom-color: #000000;
@@ -529,7 +530,7 @@ html {
   width: 100%;
 }
 
-#qbkjfiluee .gt_group_heading {
+#muhpljnrrl .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -554,7 +555,7 @@ html {
   vertical-align: middle;
 }
 
-#qbkjfiluee .gt_empty_group_heading {
+#muhpljnrrl .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -569,15 +570,15 @@ html {
   vertical-align: middle;
 }
 
-#qbkjfiluee .gt_from_md > :first-child {
+#muhpljnrrl .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#qbkjfiluee .gt_from_md > :last-child {
+#muhpljnrrl .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#qbkjfiluee .gt_row {
+#muhpljnrrl .gt_row {
   padding-top: 2px;
   padding-bottom: 2px;
   padding-left: 5px;
@@ -596,7 +597,7 @@ html {
   overflow-x: hidden;
 }
 
-#qbkjfiluee .gt_stub {
+#muhpljnrrl .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 80%;
@@ -609,7 +610,7 @@ html {
   padding-right: 5px;
 }
 
-#qbkjfiluee .gt_stub_row_group {
+#muhpljnrrl .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -623,11 +624,11 @@ html {
   vertical-align: top;
 }
 
-#qbkjfiluee .gt_row_group_first td {
+#muhpljnrrl .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#qbkjfiluee .gt_summary_row {
+#muhpljnrrl .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -637,16 +638,16 @@ html {
   padding-right: 5px;
 }
 
-#qbkjfiluee .gt_first_summary_row {
+#muhpljnrrl .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#qbkjfiluee .gt_first_summary_row.thick {
+#muhpljnrrl .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#qbkjfiluee .gt_last_summary_row {
+#muhpljnrrl .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -656,7 +657,7 @@ html {
   border-bottom-color: #D3D3D3;
 }
 
-#qbkjfiluee .gt_grand_summary_row {
+#muhpljnrrl .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -666,7 +667,7 @@ html {
   padding-right: 5px;
 }
 
-#qbkjfiluee .gt_first_grand_summary_row {
+#muhpljnrrl .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -676,11 +677,11 @@ html {
   border-top-color: #D3D3D3;
 }
 
-#qbkjfiluee .gt_striped {
+#muhpljnrrl .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#qbkjfiluee .gt_table_body {
+#muhpljnrrl .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -689,7 +690,7 @@ html {
   border-bottom-color: #D3D3D3;
 }
 
-#qbkjfiluee .gt_footnotes {
+#muhpljnrrl .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -703,7 +704,7 @@ html {
   border-right-color: #D3D3D3;
 }
 
-#qbkjfiluee .gt_footnote {
+#muhpljnrrl .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -712,7 +713,7 @@ html {
   padding-right: 5px;
 }
 
-#qbkjfiluee .gt_sourcenotes {
+#muhpljnrrl .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -726,7 +727,7 @@ html {
   border-right-color: #D3D3D3;
 }
 
-#qbkjfiluee .gt_sourcenote {
+#muhpljnrrl .gt_sourcenote {
   font-size: 12px;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -734,36 +735,36 @@ html {
   padding-right: 5px;
 }
 
-#qbkjfiluee .gt_left {
+#muhpljnrrl .gt_left {
   text-align: left;
 }
 
-#qbkjfiluee .gt_center {
+#muhpljnrrl .gt_center {
   text-align: center;
 }
 
-#qbkjfiluee .gt_right {
+#muhpljnrrl .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#qbkjfiluee .gt_font_normal {
+#muhpljnrrl .gt_font_normal {
   font-weight: normal;
 }
 
-#qbkjfiluee .gt_font_bold {
+#muhpljnrrl .gt_font_bold {
   font-weight: bold;
 }
 
-#qbkjfiluee .gt_font_italic {
+#muhpljnrrl .gt_font_italic {
   font-style: italic;
 }
 
-#qbkjfiluee .gt_super {
+#muhpljnrrl .gt_super {
   font-size: 65%;
 }
 
-#qbkjfiluee .gt_two_val_uncert {
+#muhpljnrrl .gt_two_val_uncert {
   display: inline-block;
   line-height: 1em;
   text-align: right;
@@ -772,31 +773,31 @@ html {
   margin-left: 0.1em;
 }
 
-#qbkjfiluee .gt_footnote_marks {
+#muhpljnrrl .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-#qbkjfiluee .gt_asterisk {
+#muhpljnrrl .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#qbkjfiluee .gt_slash_mark {
+#muhpljnrrl .gt_slash_mark {
   font-size: 0.7em;
   line-height: 0.7em;
   vertical-align: 0.15em;
 }
 
-#qbkjfiluee .gt_fraction_numerator {
+#muhpljnrrl .gt_fraction_numerator {
   font-size: 0.6em;
   line-height: 0.6em;
   vertical-align: 0.45em;
 }
 
-#qbkjfiluee .gt_fraction_denominator {
+#muhpljnrrl .gt_fraction_denominator {
   font-size: 0.6em;
   line-height: 0.6em;
   vertical-align: -0.05em;
