@@ -4,7 +4,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="gamezoneR">
 <title>Intro to gamezoneR • gamezoneR</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
@@ -12,79 +13,121 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png">
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png">
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png">
-<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="../bootstrap-toc.css">
-<script src="../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
+<script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="../deps/bootstrap-5.1.0/bootstrap.min.css" rel="stylesheet">
+<script src="../deps/bootstrap-5.1.0/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
-<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
-<script src="../pkgdown.js"></script><meta property="og:title" content="Intro to gamezoneR">
+<!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Intro to gamezoneR">
 <meta property="og:description" content="gamezoneR">
-<meta property="og:image" content="http://jacklich10.github.io/gamezoneR/logo.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/JackLich10/gamezoneR/master/man/figures/gamezoneR_40trans.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:creator" content="@jacklich10">
+<meta name="twitter:site" content="@sportsdataverse">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 </head>
-<body data-spy="scroll" data-target="#toc">
+<body>
+    <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
     
 
-    <div class="container template-article">
-      <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <span class="navbar-brand">
-        <a class="navbar-link" href="../index.html">gamezoneR</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.1</span>
-      </span>
-    </div>
+    <nav class="navbar fixed-top navbar-dark navbar-expand-lg bg-primary"><div class="container">
+    
+    <a class="navbar-brand me-2" href="../index.html">gamezoneR</a>
 
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-<li>
-  <a href="../reference/index.html">Reference</a>
-</li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Articles
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.1</small>
+
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar" class="collapse navbar-collapse ms-3">
+      <ul class="navbar-nav me-auto">
+<li class="nav-item">
+  <a class="nav-link" href="../reference/index.html">
+    <span class="fas fa fas fa-code"></span>
      
-    <span class="caret"></span>
+    Functions
   </a>
-  <ul class="dropdown-menu" role="menu">
-<li>
-      <a href="../articles/intro-to-gamezoneR.html">Intro to gamezoneR</a>
-    </li>
-  </ul>
 </li>
-<li>
-  <a href="../news/index.html">Changelog</a>
+<li class="nav-item">
+  <a class="nav-link" href="../news/index.html">
+    <span class="fas fa fas fa-newspaper"></span>
+     
+     News
+  </a>
+</li>
+<li class="nav-item dropdown">
+  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown--sdv">
+    <span class="fas fa fas fa-project-diagram"></span>
+     
+     SDV
+  </a>
+  <div class="dropdown-menu" aria-labelledby="dropdown--sdv">
+    <a class="external-link dropdown-item" href="https://sportsdataverse.org/">SportsDataverse</a>
+    <div class="dropdown-divider"></div>
+    <h6 class="dropdown-header" data-toc-skip>R Packages</h6>
+    <a class="external-link dropdown-item" href="https://r.sportsdataverse.org/">sportsdataverse-R</a>
+    <a class="external-link dropdown-item" href="https://cfbfastR.sportsdataverse.org/">cfbfastR</a>
+    <a class="external-link dropdown-item" href="https://hoopR.sportsdataverse.org/">hoopR</a>
+    <a class="external-link dropdown-item" href="https://wehoop.sportsdataverse.org/">wehoop</a>
+    <a class="external-link dropdown-item" href="https://torvik.dev/">toRvik</a>
+    <a class="external-link dropdown-item" href="https://fastRhockey.sportsdataverse.org/">fastRhockey</a>
+    <a class="external-link dropdown-item" href="https://BillPetti.github.io/baseballr/">baseballr</a>
+    <a class="external-link dropdown-item" href="https://jaseziv.github.io/worldfootballR/">worldfootballR</a>
+    <a class="external-link dropdown-item" href="https://jaseziv.github.io/chessR/">chessR</a>
+    <a class="external-link dropdown-item" href="https://kazink36.github.io/cfbplotR/">cfbplotR</a>
+    <a class="external-link dropdown-item" href="https://kazink36.github.io/cfb4th/">cfb4th</a>
+    <a class="external-link dropdown-item" href="https://recruitr.sportsdataverse.org/">recruitR</a>
+    <a class="external-link dropdown-item" href="https://jacklich10.github.io/gamezoneR/">gamezoneR</a>
+    <a class="external-link dropdown-item" href="https://puntalytics.github.io/puntr/">puntr</a>
+    <div class="dropdown-divider"></div>
+    <h6 class="dropdown-header" data-toc-skip>Python Packages</h6>
+    <a class="external-link dropdown-item" href="https://py.sportsdataverse.org/">sportsdataverse-py</a>
+    <div class="dropdown-divider"></div>
+    <h6 class="dropdown-header" data-toc-skip>Node.js Packages</h6>
+    <a class="external-link dropdown-item" href="https://js.sportsdataverse.org/">sportsdataverse.js</a>
+    <a class="external-link dropdown-item" href="https://github.com/nntrn/nfl-nerd/">nfl-nerd</a>
+  </div>
 </li>
       </ul>
-<ul class="nav navbar-nav navbar-right"></ul>
+<form class="form-inline my-2 my-lg-0" role="search">
+        <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="../search.json" id="search-input" placeholder="Search for" autocomplete="off">
+</form>
+
+      <ul class="navbar-nav">
+<li class="nav-item">
+  <a class="external-link nav-link" href="https://twitter.com/jacklich10">
+    <span class="fab fa fab fa-twitter fa-lg"></span>
+     
+  </a>
+</li>
+<li class="nav-item">
+  <a class="external-link nav-link" href="https://github.com/JackLich10/gamezoneR">
+    <span class="fab fa fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
 </div>
-<!--/.nav-collapse -->
+
+    
   </div>
-<!--/.container -->
-</div>
-<!--/.navbar -->
+</nav><div class="container template-article">
 
-      
 
-      </header><script src="intro-to-gamezoneR_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
-  <div class="col-md-9 contents">
-    <div class="page-header toc-ignore">
-      <h1 data-toc-skip>Intro to gamezoneR</h1>
+
+
+<div class="row">
+  <main id="main"><div class="page-header">
+      <img src="../logo.png" class="logo" alt=""><h1>Intro to gamezoneR</h1>
                         <h4 data-toc-skip class="author">Jack Lichtenstein</h4>
             
       
-      
-      <div class="hidden name"><code>intro-to-gamezoneR.Rmd</code></div>
-
+      <small class="dont-index">Source: <a href="https://github.com/JackLich10/gamezoneR/blob/HEAD/vignettes/intro-to-gamezoneR.Rmd" class="external-link"><code>vignettes/intro-to-gamezoneR.Rmd</code></a></small>
+      <div class="d-none name"><code>intro-to-gamezoneR.Rmd</code></div>
     </div>
 
     
@@ -131,51 +174,51 @@
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># first, the ranked games for a given date</span>
 <span class="va">schedule</span> <span class="op">&lt;-</span> <span class="fu">gamezoneR</span><span class="fu">::</span><span class="fu"><a href="../reference/gamezone_mbb_master_schedule.html">gamezone_mbb_master_schedule</a></span><span class="op">(</span>date <span class="op">=</span> <span class="st">"2021-03-10"</span>, ranked_games <span class="op">=</span> <span class="cn">T</span><span class="op">)</span></code></pre></div>
-<pre><code><span class="co">## <span style="color: #BBBB00;">ℹ</span> Scraping ranked games master schedule for: 2021-03-10</span>
-<span class="co">## <span style="color: #BBBB00;">ℹ</span> There were 1 game(s) on 2021-03-10</span></code></pre>
+<pre><code><span class="co">## <span style="color: #BBBB00;">i</span> Scraping ranked games master schedule for: 2021-03-10</span>
+<span class="co">## <span style="color: #BBBB00;">i</span> There were 1 game(s) on 2021-03-10</span></code></pre>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">schedule</span><span class="op">)</span></code></pre></div>
-<pre><code><span class="co">## <span style="color: #949494;"># A tibble: 1 × 21</span></span>
-<span class="co">##   season  start_time game_date  game_id tv    home     away    home_abbr home_id</span>
-<span class="co">##   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;date&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span>
-<span class="co">## <span style="color: #BCBCBC;">1</span> 2020-21 9:30 PM ET 2021-03-10 2<span style="text-decoration: underline;">317</span>212 ESPN  Oklahoma Iowa S… Okla         <span style="text-decoration: underline;">1</span>558</span>
-<span class="co">## <span style="color: #949494;"># … with 12 more variables: home_is_winner &lt;lgl&gt;, home_logo_id &lt;chr&gt;,</span></span>
-<span class="co">## <span style="color: #949494;">#   home_name &lt;chr&gt;, home_total &lt;dbl&gt;, home_ap_ranking &lt;int&gt;,</span></span>
-<span class="co">## <span style="color: #949494;">#   home_record &lt;chr&gt;, away_abbr &lt;chr&gt;, away_id &lt;int&gt;, away_logo_id &lt;chr&gt;,</span></span>
-<span class="co">## <span style="color: #949494;">#   away_name &lt;chr&gt;, away_total &lt;dbl&gt;, away_record &lt;chr&gt;</span></span></code></pre>
+<pre><code><span class="co">## <span style="color: #949494;"># A tibble: 1 x 21</span></span>
+<span class="co">##   season  start_time game_date  game_id tv    home     away       home_abbr</span>
+<span class="co">##   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;date&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    </span>
+<span class="co">## <span style="color: #BCBCBC;">1</span> 2020-21 9:30 PM ET 2021-03-10 2<span style="text-decoration: underline;">317</span>212 ESPN  Oklahoma Iowa State Okla     </span>
+<span class="co">## <span style="color: #949494;"># ... with 13 more variables: home_ap_ranking &lt;int&gt;, home_id &lt;int&gt;,</span></span>
+<span class="co">## <span style="color: #949494;">#   home_is_winner &lt;lgl&gt;, home_logo_id &lt;chr&gt;, home_name &lt;chr&gt;,</span></span>
+<span class="co">## <span style="color: #949494;">#   home_total &lt;dbl&gt;, home_record &lt;chr&gt;, away_abbr &lt;chr&gt;, away_id &lt;int&gt;,</span></span>
+<span class="co">## <span style="color: #949494;">#   away_logo_id &lt;chr&gt;, away_name &lt;chr&gt;, away_total &lt;dbl&gt;, away_record &lt;chr&gt;</span></span></code></pre>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># then, all the games for a given date</span>
 <span class="va">schedule</span> <span class="op">&lt;-</span> <span class="fu">gamezoneR</span><span class="fu">::</span><span class="fu"><a href="../reference/gamezone_mbb_master_schedule.html">gamezone_mbb_master_schedule</a></span><span class="op">(</span>date <span class="op">=</span> <span class="st">"2021-03-10"</span>, ranked_games <span class="op">=</span> <span class="cn">F</span><span class="op">)</span></code></pre></div>
-<pre><code><span class="co">## <span style="color: #BBBB00;">ℹ</span> Scraping master GameZone schedule for: 2021-03-10</span>
-<span class="co">## <span style="color: #BBBB00;">ℹ</span> There were 184 game(s) on 2021-03-10</span></code></pre>
+<pre><code><span class="co">## <span style="color: #BBBB00;">i</span> Scraping master GameZone schedule for: 2021-03-10</span>
+<span class="co">## <span style="color: #BBBB00;">i</span> There were 184 game(s) on 2021-03-10</span></code></pre>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">schedule</span><span class="op">)</span></code></pre></div>
-<pre><code><span class="co">## <span style="color: #949494;"># A tibble: 6 × 9</span></span>
+<pre><code><span class="co">## <span style="color: #949494;"># A tibble: 6 x 9</span></span>
 <span class="co">##   season  game_date  game_id home    away  home_total away_total home_ap_ranking</span>
 <span class="co">##   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span>
-<span class="co">## <span style="color: #BCBCBC;">1</span> 2020-21 2021-03-10 2<span style="text-decoration: underline;">385</span>719 Manhat… Manh…         42         99              <span style="color: #BB0000;">NA</span></span>
-<span class="co">## <span style="color: #BCBCBC;">2</span> 2020-21 2021-03-10 2<span style="text-decoration: underline;">378</span>060 Alcorn… Wash…         67         85              <span style="color: #BB0000;">NA</span></span>
-<span class="co">## <span style="color: #BCBCBC;">3</span> 2020-21 2021-03-10 2<span style="text-decoration: underline;">398</span>899 MSM     Vill…         51         91              <span style="color: #BB0000;">NA</span></span>
-<span class="co">## <span style="color: #BCBCBC;">4</span> 2020-21 2021-03-10 2<span style="text-decoration: underline;">387</span>146 UC San… Cali…         80         67              <span style="color: #BB0000;">NA</span></span>
-<span class="co">## <span style="color: #BCBCBC;">5</span> 2020-21 2021-03-10 2<span style="text-decoration: underline;">395</span>485 B-C     Sout…         54         75              <span style="color: #BB0000;">NA</span></span>
-<span class="co">## <span style="color: #BCBCBC;">6</span> 2020-21 2021-03-10 2<span style="text-decoration: underline;">387</span>519 BobJon  Woff…         79        117              <span style="color: #BB0000;">NA</span></span>
-<span class="co">## <span style="color: #949494;"># … with 1 more variable: away_ap_ranking &lt;dbl&gt;</span></span></code></pre>
+<span class="co">## <span style="color: #BCBCBC;">1</span> 2020-21 2021-03-10 2<span style="text-decoration: underline;">385</span>719 Manhat~ Manh~         42         99              <span style="color: #BB0000;">NA</span></span>
+<span class="co">## <span style="color: #BCBCBC;">2</span> 2020-21 2021-03-10 2<span style="text-decoration: underline;">378</span>060 Alcorn~ Wash~         67         85              <span style="color: #BB0000;">NA</span></span>
+<span class="co">## <span style="color: #BCBCBC;">3</span> 2020-21 2021-03-10 2<span style="text-decoration: underline;">398</span>899 MSM     Vill~         51         91              <span style="color: #BB0000;">NA</span></span>
+<span class="co">## <span style="color: #BCBCBC;">4</span> 2020-21 2021-03-10 2<span style="text-decoration: underline;">387</span>146 UC San~ Cali~         80         67              <span style="color: #BB0000;">NA</span></span>
+<span class="co">## <span style="color: #BCBCBC;">5</span> 2020-21 2021-03-10 2<span style="text-decoration: underline;">395</span>485 B-C     Sout~         54         75              <span style="color: #BB0000;">NA</span></span>
+<span class="co">## <span style="color: #BCBCBC;">6</span> 2020-21 2021-03-10 2<span style="text-decoration: underline;">387</span>519 BobJon  Woff~         79        117              <span style="color: #BB0000;">NA</span></span>
+<span class="co">## <span style="color: #949494;"># ... with 1 more variable: away_ap_ranking &lt;dbl&gt;</span></span></code></pre>
 <p>We are able to scrape games by date, but also by team using the <code>gamezoneR::get_team_schedule()</code> function.</p>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">duke_schedule</span> <span class="op">&lt;-</span> <span class="fu">gamezoneR</span><span class="fu">::</span><span class="fu"><a href="../reference/gamezone_mbb_team_schedule.html">gamezone_mbb_team_schedule</a></span><span class="op">(</span>team <span class="op">=</span> <span class="st">"Duke"</span>, season <span class="op">=</span> <span class="st">"2018-19"</span><span class="op">)</span></code></pre></div>
-<pre><code><span class="co">## <span style="color: #BBBB00;">ℹ</span> Scraping 2018-19 season schedule for: Duke</span></code></pre>
+<pre><code><span class="co">## <span style="color: #BBBB00;">i</span> Scraping 2018-19 season schedule for: Duke</span></code></pre>
 <div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">duke_schedule</span><span class="op">)</span></code></pre></div>
-<pre><code><span class="co">## <span style="color: #949494;"># A tibble: 6 × 23</span></span>
+<pre><code><span class="co">## <span style="color: #949494;"># A tibble: 6 x 23</span></span>
 <span class="co">##   season  start_time game_date  game_id tv    home            away     home_abbr</span>
 <span class="co">##   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;date&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    </span>
 <span class="co">## <span style="color: #BCBCBC;">1</span> 2018-19 9:49 PM ET 2018-11-06 2<span style="text-decoration: underline;">083</span>190 ESPN  Kentucky        Duke     Kty      </span>
-<span class="co">## <span style="color: #BCBCBC;">2</span> 2018-19 1:00 PM ET 2018-11-11 2<span style="text-decoration: underline;">087</span>019 ESPN  Duke            Army We… Duke     </span>
-<span class="co">## <span style="color: #BCBCBC;">3</span> 2018-19 7:00 PM ET 2018-11-14 2<span style="text-decoration: underline;">087</span>022 ACCN  Duke            Eastern… Duke     </span>
+<span class="co">## <span style="color: #BCBCBC;">2</span> 2018-19 1:00 PM ET 2018-11-11 2<span style="text-decoration: underline;">087</span>019 ESPN  Duke            Army We~ Duke     </span>
+<span class="co">## <span style="color: #BCBCBC;">3</span> 2018-19 7:00 PM ET 2018-11-14 2<span style="text-decoration: underline;">087</span>022 ACCN  Duke            Eastern~ Duke     </span>
 <span class="co">## <span style="color: #BCBCBC;">4</span> 2018-19 6:09 PM ET 2018-11-19 2<span style="text-decoration: underline;">082</span>919 ESP2  San Diego State Duke     SDSU     </span>
 <span class="co">## <span style="color: #BCBCBC;">5</span> 2018-19 8:00 PM ET 2018-11-20 2<span style="text-decoration: underline;">082</span>916 ESPN  Duke            Auburn   Duke     </span>
 <span class="co">## <span style="color: #BCBCBC;">6</span> 2018-19 5:00 PM ET 2018-11-21 2<span style="text-decoration: underline;">082</span>915 ESPN  Gonzaga         Duke     Gonz     </span>
-<span class="co">## <span style="color: #949494;"># … with 15 more variables: home_ap_ranking &lt;int&gt;, home_id &lt;int&gt;,</span></span>
+<span class="co">## <span style="color: #949494;"># ... with 15 more variables: home_ap_ranking &lt;int&gt;, home_id &lt;int&gt;,</span></span>
 <span class="co">## <span style="color: #949494;">#   home_logo_id &lt;chr&gt;, home_name &lt;chr&gt;, home_total &lt;dbl&gt;,</span></span>
 <span class="co">## <span style="color: #949494;">#   home_is_winner &lt;lgl&gt;, home_record &lt;chr&gt;, away_abbr &lt;chr&gt;,</span></span>
 <span class="co">## <span style="color: #949494;">#   away_ap_ranking &lt;int&gt;, away_id &lt;int&gt;, away_is_winner &lt;lgl&gt;,</span></span>
@@ -189,21 +232,21 @@
 <div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">pbp</span> <span class="op">&lt;-</span> <span class="fu">gamezoneR</span><span class="fu">::</span><span class="fu"><a href="../reference/gamezone_mbb_pbp.html">gamezone_mbb_pbp</a></span><span class="op">(</span><span class="va">duke_schedule</span><span class="op">$</span><span class="va">game_id</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span>,
                                    sub_parse <span class="op">=</span> <span class="cn">T</span><span class="op">)</span></code></pre></div>
-<pre><code><span class="co">## <span style="color: #BB0000;">•</span> Scraping Play-by-Play for GameID: 2083190</span>
-<span class="co">## <span style="color: #BB0000;">•</span> Attempting to parse lineup and substitution data...</span>
+<pre><code><span class="co">## <span style="color: #BB0000;">*</span> Scraping Play-by-Play for GameID: 2083190</span>
+<span class="co">## <span style="color: #BB0000;">*</span> Attempting to parse lineup and substitution data...</span>
 <span class="co">##   Note that GameZone does not track all substitutions</span>
-<span class="co">## <span style="color: #00BB00;">✔</span> Completed GameID: 2083190</span>
+<span class="co">## <span style="color: #00BB00;">v</span> Completed GameID: 2083190</span>
 <span class="co">##   Duke @ Kentucky</span></code></pre>
 <div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">pbp</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> 
   <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html" class="external-link">count</a></span><span class="op">(</span><span class="va">sub_error</span><span class="op">)</span></code></pre></div>
-<pre><code><span class="co">## <span style="color: #949494;"># A tibble: 1 × 2</span></span>
+<pre><code><span class="co">## <span style="color: #949494;"># A tibble: 1 x 2</span></span>
 <span class="co">##   sub_error     n</span>
 <span class="co">##   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span>
 <span class="co">## <span style="color: #BCBCBC;">1</span> <span style="color: #BB0000;">NA</span>          377</span></code></pre>
 <div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">pbp</span><span class="op">)</span></code></pre></div>
-<pre><code><span class="co">## <span style="color: #949494;"># A tibble: 6 × 45</span></span>
+<pre><code><span class="co">## <span style="color: #949494;"># A tibble: 6 x 45</span></span>
 <span class="co">##   season  date       game_id play_id neutral  half home     away  home_name</span>
 <span class="co">##   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;date&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    </span>
 <span class="co">## <span style="color: #BCBCBC;">1</span> 2018-19 2018-11-06 2<span style="text-decoration: underline;">083</span>190       1       0     1 Kentucky Duke  Wildcats </span>
@@ -212,13 +255,13 @@
 <span class="co">## <span style="color: #BCBCBC;">4</span> 2018-19 2018-11-06 2<span style="text-decoration: underline;">083</span>190       1       0     1 Kentucky Duke  Wildcats </span>
 <span class="co">## <span style="color: #BCBCBC;">5</span> 2018-19 2018-11-06 2<span style="text-decoration: underline;">083</span>190       1       0     1 Kentucky Duke  Wildcats </span>
 <span class="co">## <span style="color: #BCBCBC;">6</span> 2018-19 2018-11-06 2<span style="text-decoration: underline;">083</span>190       1       0     1 Kentucky Duke  Wildcats </span>
-<span class="co">## <span style="color: #949494;"># … with 36 more variables: away_name &lt;chr&gt;, home_timeouts &lt;dbl&gt;,</span></span>
+<span class="co">## <span style="color: #949494;"># ... with 36 more variables: away_name &lt;chr&gt;, home_timeouts &lt;dbl&gt;,</span></span>
 <span class="co">## <span style="color: #949494;">#   away_timeouts &lt;dbl&gt;, home_score &lt;dbl&gt;, away_score &lt;dbl&gt;, score_diff &lt;dbl&gt;,</span></span>
 <span class="co">## <span style="color: #949494;">#   team_id &lt;dbl&gt;, event_team &lt;chr&gt;, game_secs_remaining &lt;dbl&gt;,</span></span>
 <span class="co">## <span style="color: #949494;">#   half_secs_remaining &lt;dbl&gt;, play_length &lt;dbl&gt;, desc &lt;chr&gt;,</span></span>
 <span class="co">## <span style="color: #949494;">#   shot_outcome &lt;chr&gt;, free_throw &lt;lgl&gt;, three_pt &lt;lgl&gt;, shot_desc &lt;chr&gt;,</span></span>
 <span class="co">## <span style="color: #949494;">#   loc_x &lt;dbl&gt;, loc_y &lt;dbl&gt;, shooter_id &lt;int&gt;, shooter &lt;chr&gt;, assist &lt;chr&gt;,</span></span>
-<span class="co">## <span style="color: #949494;">#   substitution &lt;dbl&gt;, poss_before &lt;chr&gt;, poss_after &lt;chr&gt;, …</span></span></code></pre>
+<span class="co">## <span style="color: #949494;">#   substitution &lt;dbl&gt;, poss_before &lt;chr&gt;, poss_after &lt;chr&gt;, ...</span></span></code></pre>
 <p>Now, let’s scrape all of Duke’s games from the Zion Williamson 2018-19 season using <code><a href="https://purrr.tidyverse.org/reference/map.html" class="external-link">purrr::map_df()</a></code>.</p>
 <div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">duke_pbp</span> <span class="op">&lt;-</span> <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html" class="external-link">map_df</a></span><span class="op">(</span><span class="va">duke_schedule</span><span class="op">$</span><span class="va">game_id</span>, 
@@ -346,13 +389,13 @@
                    .groups <span class="op">=</span> <span class="st">"drop"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
   <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span>ppp <span class="op">=</span> <span class="va">points</span><span class="op">/</span><span class="va">poss</span><span class="op">)</span></code></pre></div>
 <p>Let’s take a look at the most proficient offenses in college basketball since 2016-17:</p>
-<div id="rocjjuiplq" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="qbkjfiluee" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 html {
   font-family: Chivo, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#rocjjuiplq .gt_table {
+#qbkjfiluee .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -377,7 +420,7 @@ html {
   border-left-color: #D3D3D3;
 }
 
-#rocjjuiplq .gt_heading {
+#qbkjfiluee .gt_heading {
   background-color: #FFFFFF;
   text-align: left;
   border-bottom-color: #FFFFFF;
@@ -389,7 +432,7 @@ html {
   border-right-color: #D3D3D3;
 }
 
-#rocjjuiplq .gt_title {
+#qbkjfiluee .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -401,7 +444,7 @@ html {
   border-bottom-width: 0;
 }
 
-#rocjjuiplq .gt_subtitle {
+#qbkjfiluee .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -413,13 +456,13 @@ html {
   border-top-width: 0;
 }
 
-#rocjjuiplq .gt_bottom_border {
+#qbkjfiluee .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#rocjjuiplq .gt_col_headings {
+#qbkjfiluee .gt_col_headings {
   border-top-style: solid;
   border-top-width: 3px;
   border-top-color: rgba(0, 0, 0, 0);
@@ -434,7 +477,7 @@ html {
   border-right-color: #D3D3D3;
 }
 
-#rocjjuiplq .gt_col_heading {
+#qbkjfiluee .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 80%;
@@ -454,7 +497,7 @@ html {
   overflow-x: hidden;
 }
 
-#rocjjuiplq .gt_column_spanner_outer {
+#qbkjfiluee .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 80%;
@@ -466,15 +509,15 @@ html {
   padding-right: 4px;
 }
 
-#rocjjuiplq .gt_column_spanner_outer:first-child {
+#qbkjfiluee .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#rocjjuiplq .gt_column_spanner_outer:last-child {
+#qbkjfiluee .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#rocjjuiplq .gt_column_spanner {
+#qbkjfiluee .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 3px;
   border-bottom-color: #000000;
@@ -486,7 +529,7 @@ html {
   width: 100%;
 }
 
-#rocjjuiplq .gt_group_heading {
+#qbkjfiluee .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -511,7 +554,7 @@ html {
   vertical-align: middle;
 }
 
-#rocjjuiplq .gt_empty_group_heading {
+#qbkjfiluee .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -526,15 +569,15 @@ html {
   vertical-align: middle;
 }
 
-#rocjjuiplq .gt_from_md > :first-child {
+#qbkjfiluee .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#rocjjuiplq .gt_from_md > :last-child {
+#qbkjfiluee .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#rocjjuiplq .gt_row {
+#qbkjfiluee .gt_row {
   padding-top: 2px;
   padding-bottom: 2px;
   padding-left: 5px;
@@ -553,7 +596,7 @@ html {
   overflow-x: hidden;
 }
 
-#rocjjuiplq .gt_stub {
+#qbkjfiluee .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 80%;
@@ -566,7 +609,7 @@ html {
   padding-right: 5px;
 }
 
-#rocjjuiplq .gt_stub_row_group {
+#qbkjfiluee .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -580,11 +623,11 @@ html {
   vertical-align: top;
 }
 
-#rocjjuiplq .gt_row_group_first td {
+#qbkjfiluee .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#rocjjuiplq .gt_summary_row {
+#qbkjfiluee .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -594,16 +637,16 @@ html {
   padding-right: 5px;
 }
 
-#rocjjuiplq .gt_first_summary_row {
+#qbkjfiluee .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#rocjjuiplq .gt_first_summary_row.thick {
+#qbkjfiluee .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#rocjjuiplq .gt_last_summary_row {
+#qbkjfiluee .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -613,7 +656,7 @@ html {
   border-bottom-color: #D3D3D3;
 }
 
-#rocjjuiplq .gt_grand_summary_row {
+#qbkjfiluee .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -623,7 +666,7 @@ html {
   padding-right: 5px;
 }
 
-#rocjjuiplq .gt_first_grand_summary_row {
+#qbkjfiluee .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -633,11 +676,11 @@ html {
   border-top-color: #D3D3D3;
 }
 
-#rocjjuiplq .gt_striped {
+#qbkjfiluee .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#rocjjuiplq .gt_table_body {
+#qbkjfiluee .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -646,7 +689,7 @@ html {
   border-bottom-color: #D3D3D3;
 }
 
-#rocjjuiplq .gt_footnotes {
+#qbkjfiluee .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -660,7 +703,7 @@ html {
   border-right-color: #D3D3D3;
 }
 
-#rocjjuiplq .gt_footnote {
+#qbkjfiluee .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -669,7 +712,7 @@ html {
   padding-right: 5px;
 }
 
-#rocjjuiplq .gt_sourcenotes {
+#qbkjfiluee .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -683,7 +726,7 @@ html {
   border-right-color: #D3D3D3;
 }
 
-#rocjjuiplq .gt_sourcenote {
+#qbkjfiluee .gt_sourcenote {
   font-size: 12px;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -691,60 +734,69 @@ html {
   padding-right: 5px;
 }
 
-#rocjjuiplq .gt_left {
+#qbkjfiluee .gt_left {
   text-align: left;
 }
 
-#rocjjuiplq .gt_center {
+#qbkjfiluee .gt_center {
   text-align: center;
 }
 
-#rocjjuiplq .gt_right {
+#qbkjfiluee .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#rocjjuiplq .gt_font_normal {
+#qbkjfiluee .gt_font_normal {
   font-weight: normal;
 }
 
-#rocjjuiplq .gt_font_bold {
+#qbkjfiluee .gt_font_bold {
   font-weight: bold;
 }
 
-#rocjjuiplq .gt_font_italic {
+#qbkjfiluee .gt_font_italic {
   font-style: italic;
 }
 
-#rocjjuiplq .gt_super {
+#qbkjfiluee .gt_super {
   font-size: 65%;
 }
 
-#rocjjuiplq .gt_footnote_marks {
+#qbkjfiluee .gt_two_val_uncert {
+  display: inline-block;
+  line-height: 1em;
+  text-align: right;
+  font-size: 60%;
+  vertical-align: -0.25em;
+  margin-left: 0.1em;
+}
+
+#qbkjfiluee .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-#rocjjuiplq .gt_asterisk {
+#qbkjfiluee .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#rocjjuiplq .gt_slash_mark {
+#qbkjfiluee .gt_slash_mark {
   font-size: 0.7em;
   line-height: 0.7em;
   vertical-align: 0.15em;
 }
 
-#rocjjuiplq .gt_fraction_numerator {
+#qbkjfiluee .gt_fraction_numerator {
   font-size: 0.6em;
   line-height: 0.6em;
   vertical-align: 0.45em;
 }
 
-#rocjjuiplq .gt_fraction_denominator {
+#qbkjfiluee .gt_fraction_denominator {
   font-size: 0.6em;
   line-height: 0.6em;
   vertical-align: -0.05em;
@@ -879,31 +931,25 @@ html {
 </table>
 </div>
 </div>
-  </div>
-
-  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
-
-      </div>
-
+  </main>
 </div>
 
 
 
-      <footer><div class="copyright">
+    <footer><div class="pkgdown-footer-left">
   <p></p>
 <p>Developed by <a href="https://twitter.com/jacklich10" class="external-link">Jack Lichtenstein</a>.</p>
 </div>
 
-<div class="pkgdown">
+<div class="pkgdown-footer-right">
   <p></p>
 <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
 </div>
 
-      </footer>
+    </footer>
 </div>
 
   
-
 
   
 
