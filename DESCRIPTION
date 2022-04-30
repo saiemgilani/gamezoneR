@@ -1,21 +1,18 @@
 Package: gamezoneR
 Type: Package
-Title: A Scraping Interface for STATS LLC GameZone College Basketball Data
+Title: Acquiring and Analyzing STATS LLC's GameZone College Basketball Data
 Version: 0.1.1
 Authors@R: person('Jack', 'Lichtenstein', email = 'jacklich10@gmail.com', role = c('aut','cre'))
 Maintainer: Jack Lichtenstein <jacklich10@gmail.com>
-Description: An R package for working with NCAA Men's Basketball play-by-play data 
-from http: //gamezone.stats.com/.
+Description:  Provides numerous utilities for acquiring and analyzing
+    NCAA Men's Basketball play-by-play data from GameZone <http://gamezone.stats.com/>.
     The package allows users to scrape team and master schedules as well as
     play-by-play data with shot locations into a tidy format.
 License: Apache License (>= 2)
 Encoding: UTF-8
 LazyData: true
-URL: https://jacklich10.github.io/gamezoneR,
-    https://www.github.com/JackLich10/gamezoneR,
-    https://saiemgilani.github.io/gamezoneR/,
-    http://gamezoner.sportsdataverse.org/
-BugReports: https://www.github.com/JackLich10/gamezoneR/issues
+URL: https://github.com/JackLich10/gamezoneR, http://gamezoner.sportsdataverse.org/
+BugReports: https://github.com/JackLich10/gamezoneR/issues
 Depends: 
     R (>= 4.0)
 Imports: 
@@ -35,4 +32,9 @@ Imports:
     usethis,
     purrr,
     xml2
+Suggests:
+    gt,
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0)
 RoxygenNote: 7.1.2
